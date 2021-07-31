@@ -27,7 +27,36 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 Fragment1 fragment1 = new Fragment1();
                 transaction.replace(R.id.frame, fragment1);
-                transaction.addToBackStack(null); // 뒤쪽 스텍으로 이동
+                transaction.commit();
+            }
+        });
+
+        btn_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                Fragment2 fragment2 = new Fragment2();
+                transaction.replace(R.id.frame, fragment2);
+                transaction.commit();
+            }
+        });
+
+        btn_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                Fragment3 fragment3 = new Fragment3();
+                transaction.replace(R.id.frame, fragment3);
+                transaction.commit();
+            }
+        });
+
+        btn_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                Fragment4 fragment4 = new Fragment4();
+                transaction.replace(R.id.frame, fragment4);
                 transaction.commit();
             }
         });
