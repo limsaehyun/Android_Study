@@ -21,7 +21,7 @@ public class Fragment4 extends Fragment {
         // MainActivity 의 onCreate와 유사
         // Fragment에서 실행될 경우
 
-        return inflater.inflate(R.layout.fragment1, container, false);
+        return inflater.inflate(R.layout.fragment4, container, false);
 
     }
 }
