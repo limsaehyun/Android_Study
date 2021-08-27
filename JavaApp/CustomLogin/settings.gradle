@@ -1,0 +1,2 @@
+rootProject.name = "CustomLogin"
+include ':app'
