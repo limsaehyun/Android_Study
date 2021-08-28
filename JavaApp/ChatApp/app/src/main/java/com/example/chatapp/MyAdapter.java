@@ -32,7 +32,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public MyAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
                                                      int viewType) {
-        // create a new view
+        // 새로운 뷰 생성
         View v =  LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.my_text_view, parent, false);
 
