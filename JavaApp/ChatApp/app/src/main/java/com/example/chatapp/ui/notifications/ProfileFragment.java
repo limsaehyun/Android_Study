@@ -14,18 +14,19 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.chatapp.R;
 import com.example.chatapp.databinding.FragmentNotificationsBinding;
+import com.example.chatapp.databinding.FragmentProfileBinding;
 
-public class NotificationsFragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
-    private FragmentNotificationsBinding binding;
+    private FragmentProfileBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         notificationsViewModel =
                 new ViewModelProvider(this).get(NotificationsViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textNotifications;
