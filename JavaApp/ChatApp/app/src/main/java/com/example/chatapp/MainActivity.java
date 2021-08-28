@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
     String stEmail;
     String stPassword;
+
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         et_email = (EditText) findViewById(R.id.et_id);
         et_pw = (EditText) findViewById(R.id.et_pw);
 
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
         btn_login = (Button) findViewById(R.id.btn_login);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,10 +61,22 @@ public class MainActivity extends AppCompatActivity {
                 stEmail = et_email.getText().toString();
                 stPassword = et_pw.getText().toString();
 
+                if(stEmail.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "이메일을 입력해주세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(stPassword.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "비밀번호을 입력해주세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                progressBar.setVisibility(View.VISIBLE);
                 mAuth.signInWithEmailAndPassword(stEmail, stPassword)
                         .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                                progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
 
                                     Log.d(TAG, "signInWithEmail:success");
@@ -89,6 +107,8 @@ public class MainActivity extends AppCompatActivity {
                 stEmail = et_email.getText().toString();
                 stPassword = et_pw.getText().toString();
 
+                progressBar.setVisibility(View.VISIBLE);
+
                 if(stEmail.isEmpty()) {
                     Toast.makeText(MainActivity.this, "이메일을 입력해주세요", Toast.LENGTH_SHORT).show();
                     return;
@@ -104,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
+                                    progressBar.setVisibility(View.GONE);
                                     Log.d(TAG, "createUserWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
 //                                    updateUI(user);
