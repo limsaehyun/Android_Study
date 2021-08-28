@@ -54,7 +54,31 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 stEmail = et_email.getText().toString();
                 stPassword = et_pw.getText().toString();
-                startActivity(new Intent(MainActivity.this, ChatActivity.class));
+
+                mAuth.signInWithEmailAndPassword(stEmail, stPassword)
+                        .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+
+                                    Log.d(TAG, "signInWithEmail:success");
+                                    FirebaseUser user = mAuth.getCurrentUser();
+//                                    updateUI(user);
+
+                                    String stUserEmail = user.getEmail();
+                                    String stUserName = user.getDisplayName();
+
+                                    System.out.println("user info" + stUserEmail + stUserName);
+                                    startActivity(new Intent(MainActivity.this, ChatActivity.class));
+                                } else {
+
+                                    Log.w(TAG, "signInWithEmail:failure", task.getException());
+                                    Toast.makeText(MainActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+//                                    updateUI(null);
+                                }
+
+                            }
+                        });
             }
         });
 
@@ -98,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
+
         FirebaseUser currentUser = mAuth.getCurrentUser();
 //        updateUI(currentUser);
 
