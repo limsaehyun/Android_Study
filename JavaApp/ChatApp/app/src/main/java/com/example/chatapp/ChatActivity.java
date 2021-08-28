@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Hashtable;
 
 public class ChatActivity extends AppCompatActivity {
@@ -61,12 +63,19 @@ public class ChatActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String stText = et_text.getText().toString();
                 Toast.makeText(ChatActivity.this, "MSG : "+stText, Toast.LENGTH_SHORT).show();;
-
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("message");
 
-                Hashtable<String, Integer> 
-                myRef.setValue("Hello, World!");
+                Calendar c = Calendar.getInstance();
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+                String datatime = dateFormat.format(c.getTime());
+
+                DatabaseReference myRef = database.getReference("message").child(datatime);
+
+                Hashtable<String, String> chatInfo = new Hashtable<String, String>();
+                chatInfo.put("email", stEmail);
+                chatInfo.put("text", stText);
+
+                myRef.setValue(chatInfo);
             }
         });
     }
