@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import org.w3c.dom.Comment;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Hashtable;
 
@@ -39,11 +40,16 @@ public class ChatActivity extends AppCompatActivity {
     FirebaseDatabase database;
 
     String stEmail;
+
+    ArrayList<Chat> chatArrayList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         database = FirebaseDatabase.getInstance();
+
+        chatArrayList = new ArrayList<>();
 
         stEmail = getIntent().getStringExtra("email");
 
@@ -65,7 +71,7 @@ public class ChatActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         String[] myDataset = {"test1", "test2", "test3", "test4"};
-        mAdapter = new MyAdapter(myDataset);
+        mAdapter = new MyAdapter(chatArrayList);
         recyclerView.setAdapter(mAdapter);
 
         ChildEventListener childEventListener = new ChildEventListener() {
@@ -80,7 +86,9 @@ public class ChatActivity extends AppCompatActivity {
                 String stText = chat.getText();
                 Log.d(TAG, "stEmail: " + stEmail);
                 Log.d(TAG, "stText: " + stText);
-                // ...
+
+                chatArrayList.add(chat);
+                mAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -91,8 +99,6 @@ public class ChatActivity extends AppCompatActivity {
                 // comment and if so displayed the changed comment.
                 Chat chat = dataSnapshot.getValue(Chat.class);
                 String commentKey = dataSnapshot.getKey();
-
-                // ...
             }
 
             @Override
@@ -109,8 +115,6 @@ public class ChatActivity extends AppCompatActivity {
 
                 // A comment has changed position, use the key to determine if we are
                 // displaying this comment and if so move it.
-
-                // ...
             }
 
             @Override

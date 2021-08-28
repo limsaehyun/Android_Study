@@ -8,8 +8,10 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-    private String[] mDataset;
+    private ArrayList<Chat> mDataset;
 
     // 각 데이터 항목의 뷰에 대한 참조 제공
     // 복잡한 데이터 항목에는 항목당 두 개 이상의 보기가 필요할 수 있습니다.
@@ -24,7 +26,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     // 적절한 생성자(데이터 세트의 종류)를 제공한다.
-    public MyAdapter(String[] myDataset) {
+    public MyAdapter(ArrayList<Chat> myDataset) {
        mDataset = myDataset;
     }
 
@@ -45,13 +47,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, int position) {
         // - 이 위치의 데이터 집합에서 요소 가져오기
         // - 뷰의 내용을 해당 요소로 바꿉니다.
-        holder.textView.setText(mDataset[position]);
+        holder.textView.setText(mDataset.get(position).getText());
 
     }
 
     // data을 리턴합니다.
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return mDataset.size();
     }
 }
