@@ -13,6 +13,8 @@ import java.util.ArrayList;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private ArrayList<Chat> mDataset;
 
+    String stMyEmail;
+
     // 각 데이터 항목의 뷰에 대한 참조 제공
     // 복잡한 데이터 항목에는 항목당 두 개 이상의 보기가 필요할 수 있습니다.
     // 뷰 홀더의 데이터 항목에 대한 모든 뷰에 대한 액세스를 제공합니다.
@@ -25,9 +27,21 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         }
     }
 
+    @Override
+    public int getItemViewType(int position) {
+
+        if(mDataset.get(position).email.equals(stMyEmail)) {
+            return 1;
+        } else {
+            return 2;
+        }
+//        return super.getItemViewType(position);
+    }
+
     // 적절한 생성자(데이터 세트의 종류)를 제공한다.
-    public MyAdapter(ArrayList<Chat> myDataset) {
+    public MyAdapter(ArrayList<Chat> myDataset, String stEmail) {
        mDataset = myDataset;
+       this.stMyEmail = stEmail;
     }
 
     // 새로운 뷰 생성
@@ -38,6 +52,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         View v =  LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.my_text_view, parent, false);
 
+        if(viewType == 1) {
+            v =  LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.right_text_view, parent, false);
+        }
         MyViewHolder vh = new MyViewHolder(v);
         return vh;
     }
