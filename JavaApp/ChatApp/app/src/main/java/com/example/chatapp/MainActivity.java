@@ -87,7 +87,9 @@ public class MainActivity extends AppCompatActivity {
                                     String stUserName = user.getDisplayName();
 
                                     System.out.println("user info" + stUserEmail + stUserName);
-                                    startActivity(new Intent(MainActivity.this, ChatActivity.class));
+                                    Intent intent = new Intent(MainActivity.this, ChatActivity.class);
+                                    intent.putExtra("email", stEmail);
+                                    startActivity(intent);
                                 } else {
 
                                     Log.w(TAG, "signInWithEmail:failure", task.getException());

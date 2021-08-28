@@ -11,6 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Hashtable;
+
 public class ChatActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
@@ -21,10 +26,13 @@ public class ChatActivity extends AppCompatActivity {
     Button btn_send;
     Button btn_finish;
 
+    String stEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+
+        stEmail = getIntent().getStringExtra("email");
 
         btn_finish = (Button) findViewById(R.id.btn_finish);
         btn_finish.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +61,12 @@ public class ChatActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String stText = et_text.getText().toString();
                 Toast.makeText(ChatActivity.this, "MSG : "+stText, Toast.LENGTH_SHORT).show();;
+
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("message");
+
+                Hashtable<String, Integer> 
+                myRef.setValue("Hello, World!");
             }
         });
     }
