@@ -26,6 +26,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Hashtable;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,10 +48,13 @@ public class MainActivity extends AppCompatActivity {
 
     ProgressBar progressBar;
 
+    FirebaseDatabase database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        database = FirebaseDatabase.getInstance();
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -136,6 +143,14 @@ public class MainActivity extends AppCompatActivity {
                                     Log.d(TAG, "createUserWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
 //                                    updateUI(user);
+
+                                    DatabaseReference myRef = database.getReference("users").child(user.getUid()); // 유니크 아이디
+
+                                    Hashtable<String, String> chatInfo = new Hashtable<String, String>();
+                                    chatInfo.put("email", user.getEmail());
+                                    myRef.setValue(chatInfo);
+
+                                    Toast.makeText(MainActivity.this, "RegisterSUccess", Toast.LENGTH_SHORT).show();
                                 } else {
                                     Log.w(TAG, "createUserWithEmail:failure", task.getException());
                                     Toast.makeText(MainActivity.this, "Authentication failed.",
