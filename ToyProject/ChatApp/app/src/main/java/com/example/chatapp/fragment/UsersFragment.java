@@ -1,4 +1,4 @@
-package com.example.chatapp.ui.dashboard;
+package com.example.chatapp.fragment;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -7,34 +7,30 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.chatapp.MyAdapter;
 import com.example.chatapp.R;
-import com.example.chatapp.User;
-import com.example.chatapp.UserAdapter;
+import com.example.chatapp.data.User;
+import com.example.chatapp.adapter.UserAdapter;
 import com.example.chatapp.databinding.FragmentUsersBinding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.StorageReference;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class UsersFragment extends Fragment {
 
     private static final String TAG = "UsersFragment";
 
-    private DashboardViewModel dashboardViewModel;
     private FragmentUsersBinding binding;
 
     ArrayList<User> userArrayList;
@@ -47,6 +43,9 @@ public class UsersFragment extends Fragment {
     RecyclerView.LayoutManager layoutManager;
 
     String stEmail;
+
+    StorageReference storageRef;
+    File localFile;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -97,6 +96,31 @@ public class UsersFragment extends Fragment {
             }
 
         });
+
+//        storageRef = FirebaseStorage.getInstance().getReference();
+//
+//
+//        try {
+//            localFile = File.createTempFile("images", "jpg");
+//
+//            StorageReference ProfileImagesRef = storageRef.child("users").child(stEmail).child("profile.jpg");
+//
+//            ProfileImagesRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+//                @Override
+//                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+//                    // 로컬파일 -> 비트맵
+//                    Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
+//                    ivUser.setImageBitmap(bitmap);
+//                }
+//            }).addOnFailureListener(new OnFailureListener() {
+//                @Override
+//                public void onFailure(@NonNull Exception exception) {
+//                }
+//            });
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
 
         return root;
     }

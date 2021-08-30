@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatApp">
         <activity
-            android:name=".TabActivity"
+            android:name=".activity.TabActivity"
             android:label="@string/title_activity_tab"></activity>
-        <activity android:name=".ChatActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.ChatActivity" />
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

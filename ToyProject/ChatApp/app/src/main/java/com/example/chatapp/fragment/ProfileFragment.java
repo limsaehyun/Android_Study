@@ -1,4 +1,4 @@
-package com.example.chatapp.ui.Profile;
+package com.example.chatapp.fragment;
 
 import android.Manifest;
 import android.content.Context;
@@ -48,7 +48,6 @@ public class ProfileFragment extends Fragment {
 
     File localFile;
 
-    private NotificationsViewModel notificationsViewModel;
     private FragmentProfileBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,

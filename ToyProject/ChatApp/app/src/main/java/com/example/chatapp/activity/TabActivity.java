@@ -1,7 +1,8 @@
-package com.example.chatapp;
+package com.example.chatapp.activity;
 
 import android.os.Bundle;
 
+import com.example.chatapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
