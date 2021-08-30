@@ -1,4 +1,4 @@
-package com.example.chatapp.ui.notifications;
+package com.example.chatapp.ui.Profile;
 
 import android.Manifest;
 import android.content.Context;
@@ -15,18 +15,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.example.chatapp.R;
-import com.example.chatapp.databinding.FragmentProfileBinding;
 import com.example.chatapp.databinding.FragmentProfileBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
