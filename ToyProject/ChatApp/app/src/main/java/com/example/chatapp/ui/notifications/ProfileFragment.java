@@ -1,9 +1,12 @@
 package com.example.chatapp.ui.notifications;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -27,10 +30,12 @@ import com.example.chatapp.databinding.FragmentProfileBinding;
 import com.example.chatapp.databinding.FragmentProfileBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.io.File;
 import java.io.IOException;
 
 public class ProfileFragment extends Fragment {
@@ -44,6 +49,10 @@ public class ProfileFragment extends Fragment {
 
     StorageReference storageRef;
 
+    String stEmail;
+
+    File localFile;
+
     private NotificationsViewModel notificationsViewModel;
     private FragmentProfileBinding binding;
 
@@ -52,7 +61,13 @@ public class ProfileFragment extends Fragment {
 
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        
+
+
+        SharedPreferences sharedPref = getActivity().getSharedPreferences("shared", Context.MODE_PRIVATE);
+        stEmail = sharedPref.getString("email", "");
+        Log.d(TAG, "email" + stEmail);
+
+
         storageRef = FirebaseStorage.getInstance().getReference();
 
         if (ContextCompat.checkSelfPermission(getActivity(),
@@ -78,6 +93,26 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        try {
+            localFile = File.createTempFile("images", "jpg");
+            StorageReference ProfileImagesRef = storageRef.child("users").child(stEmail).child("profile.jpg");
+
+            ProfileImagesRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                    // 로컬파일 -> 비트맵
+                    Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
+                    ivUser.setImageBitmap(bitmap);
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         return root;
     }
 
@@ -95,7 +130,7 @@ public class ProfileFragment extends Fragment {
                 e.printStackTrace();
             }
 
-            StorageReference ProfileImagesRef = storageRef.child("images/userProfileImage.jpg");
+            StorageReference ProfileImagesRef = storageRef.child("users").child(stEmail).child("profile.jpg");
 
             ProfileImagesRef.putFile(image).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
