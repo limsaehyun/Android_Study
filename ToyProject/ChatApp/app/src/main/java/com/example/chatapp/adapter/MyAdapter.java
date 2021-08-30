@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private ArrayList<Chat> mDataset;
 
-    String stMyEmail;
+    private String stMyEmail;
 
     // 각 데이터 항목의 뷰에 대한 참조 제공
     // 복잡한 데이터 항목에는 항목당 두 개 이상의 보기가 필요할 수 있습니다.

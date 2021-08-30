@@ -33,19 +33,19 @@ public class UsersFragment extends Fragment {
 
     private FragmentUsersBinding binding;
 
-    ArrayList<User> userArrayList;
+    private ArrayList<User> userArrayList;
 
-    FirebaseDatabase database;
+    private FirebaseDatabase database;
 
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
 
-    UserAdapter mAdapter;
-    RecyclerView.LayoutManager layoutManager;
+    private UserAdapter mAdapter;
+    private RecyclerView.LayoutManager layoutManager;
 
-    String stEmail;
+    private String stEmail;
 
-    StorageReference storageRef;
-    File localFile;
+    private StorageReference storageRef;
+    private File localFile;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

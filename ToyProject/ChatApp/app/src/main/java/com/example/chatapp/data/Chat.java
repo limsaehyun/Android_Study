@@ -1,8 +1,8 @@
 package com.example.chatapp.data;
 
 public class Chat {
-    String email;
-    String text;
+    private String email;
+    private String text;
 
     public String getEmail() {
         return email;

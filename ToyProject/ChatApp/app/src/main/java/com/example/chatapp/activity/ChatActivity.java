@@ -29,19 +29,19 @@ public class ChatActivity extends AppCompatActivity {
 
     private static final String TAG = "ChatActivity";
 
-    RecyclerView recyclerView;
-    MyAdapter mAdapter;
-    RecyclerView.LayoutManager layoutManager;
+    private RecyclerView recyclerView;
+    private MyAdapter mAdapter;
+    private RecyclerView.LayoutManager layoutManager;
 
-    EditText et_text;
-    Button btn_send;
-    Button btn_finish;
+    private EditText et_text;
+    private Button btn_send;
+    private Button btn_finish;
 
-    FirebaseDatabase database;
+    private FirebaseDatabase database;
 
-    String stEmail;
+    private String stEmail;
 
-    ArrayList<Chat> chatArrayList;
+    private ArrayList<Chat> chatArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +70,6 @@ public class ChatActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        String[] myDataset = {"test1", "test2", "test3", "test4"};
         mAdapter = new MyAdapter(chatArrayList, stEmail);
         recyclerView.setAdapter(mAdapter);
 
@@ -127,8 +126,7 @@ public class ChatActivity extends AppCompatActivity {
         DatabaseReference databaseReference = database.getReference("message");
         databaseReference.addChildEventListener(childEventListener);
 
-
-
+        
         btn_send = (Button) findViewById(R.id.btn_send);
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override

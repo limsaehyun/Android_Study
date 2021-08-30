@@ -40,13 +40,13 @@ public class ProfileFragment extends Fragment {
     int REQUEST_IMAGE_CODE = 1001;
     int REQUEST_EXTERNAL_STORAGE_PERMISSION = 1002;
 
-    ImageView ivUser;
+    private ImageView ivUser;
 
-    StorageReference storageRef;
+    private StorageReference storageRef;
 
-    String stEmail;
+    private String stEmail;
 
-    File localFile;
+    private File localFile;
 
     private FragmentProfileBinding binding;
 

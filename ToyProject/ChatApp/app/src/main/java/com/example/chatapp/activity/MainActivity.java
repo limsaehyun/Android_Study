@@ -31,18 +31,19 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
-    EditText et_email;
-    EditText et_pw;
+    private EditText et_email;
+    private EditText et_pw;
 
-    Button btn_login;
-    Button btn_register;
+    private Button btn_login;
+    private Button btn_register;
 
-    String stEmail;
-    String stPassword;
+    private String stEmail;
+    private String stPassword;
 
-    ProgressBar progressBar;
+    private ProgressBar progressBar;
 
-    FirebaseDatabase database;
+    private FirebaseDatabase database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
