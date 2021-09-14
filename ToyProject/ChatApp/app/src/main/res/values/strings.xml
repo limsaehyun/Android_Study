@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">ChatApp</string>
-    <string name="title_activity_tab">MainActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_friends">Users</string>
-    <string name="title_profile">Profile</string>
-</resources>
