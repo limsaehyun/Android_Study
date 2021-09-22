@@ -6,7 +6,8 @@
 
   
 
-  ![image-20210922221603421](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20210922221603421.png)
+![Untitled](https://user-images.githubusercontent.com/80076029/134350669-6ea8bd42-8533-4582-b656-1aaff6552e9c.png)
+
 
 **<MVC Components>**
 
