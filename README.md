@@ -1,7 +1,5 @@
 # Android JetPack
 
----
-
 ## Architecture
 
 - [Data Binding](https://www.notion.so/Data-Binding-c53459f6e24e48fc8e7169711277b8a1)
@@ -37,7 +35,7 @@
 - Sharing
 - Slices
 
----
+
 
 ## Jetpack에 대해서
 
@@ -49,7 +47,7 @@ Google Developet 공식 사이트에 의하면 Jetpack을 다음과 같이 정�
 
 ## Jetpack의 구성요소
 
-
+![Untitled](https://user-images.githubusercontent.com/80076029/134659556-7829e72f-811b-422e-bbef-5458f57b1645.png)
 
 ### Architecture
 
