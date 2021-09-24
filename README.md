@@ -2,7 +2,7 @@
 
 ## Architecture
 
-- [Data Binding](https://www.notion.so/Data-Binding-c53459f6e24e48fc8e7169711277b8a1)
+- [데이터 바인딩(Data Binding)](https://github.com/limsaehyun/Jetpack_Study_Android/tree/main/DataBinding)
 - Lifecycles
 - Navigation
 - Paging
