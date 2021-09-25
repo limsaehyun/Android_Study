@@ -1,11 +1,11 @@
-package com.saehyun.tabviewexample
+package com.saehyun.tabviewexample.model
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.saehyun.tabviewexample.BlankFragment
-import com.saehyun.tabviewexample.BlankFragment2
-import com.saehyun.tabviewexample.BlankFragment3
+import com.saehyun.tabviewexample.controller.fragment.BlankFragment
+import com.saehyun.tabviewexample.controller.fragment.BlankFragment2
+import com.saehyun.tabviewexample.controller.fragment.BlankFragment3
 
 class FragmentAdapter (fm : FragmentManager): FragmentPagerAdapter(fm) {
     //position 에 따라 원하는 Fragment로 이동시키기

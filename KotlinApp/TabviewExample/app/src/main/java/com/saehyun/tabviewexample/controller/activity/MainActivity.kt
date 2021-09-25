@@ -1,10 +1,11 @@
-package com.saehyun.tabviewexample
+package com.saehyun.tabviewexample.controller.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
-import com.saehyun.tabviewexample.FragmentAdapter
+import com.saehyun.tabviewexample.R
+import com.saehyun.tabviewexample.model.FragmentAdapter
 
 class MainActivity : AppCompatActivity() {
 

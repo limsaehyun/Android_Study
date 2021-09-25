@@ -1,10 +1,11 @@
-package com.saehyun.tabviewexample
+package com.saehyun.tabviewexample.controller.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.saehyun.tabviewexample.R
 
 class BlankFragment2 : Fragment() {
 
