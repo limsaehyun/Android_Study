@@ -9,6 +9,6 @@
 
 - 이 부분에서 Reactive(반응형) 프로그래밍, Functional(함수형) 프로그래밍이란 개념이 나온다.
 
-[  Reactive Programming](https://www.notion.so/Reactive-Programming-21cd3210cd654f67a217834d2109e8b4)
+[  Reactive Programming](https://pepper-warrior-4ce.notion.site/Reactive-Programming-5304e5bb75c44316822b9eda348da6b6)
 
   Functional Programming
