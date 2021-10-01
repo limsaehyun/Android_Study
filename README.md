@@ -3,7 +3,7 @@
 ## Architecture
 
 - [데이터 바인딩(Data Binding)](https://github.com/limsaehyun/Jetpack_Study_Android/tree/main/DataBinding)
-- Lifecycles
+- [Life Cycles](https://github.com/limsaehyun/Jetpack_Study_Android/blob/main/Life%20Cycles/README.md)
 - Navigation
 - Paging
 - Room
