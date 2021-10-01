@@ -6,11 +6,11 @@
 
 - 앱에서 발생하는 특정 이벤트 (앱이 시작할 때, 앱에 들어갈 때 등)에 대해 정의를 한 것이다.
 
-[Activity 생명주기](https://www.notion.so/Activity-c1797beabb90471eac0fff7bff0e37ee)
+[Activity 생명주기](https://github.com/limsaehyun/Jetpack_Study_Android/blob/main/Life%20Cycles/Activity%20Life%20Cycles/README.md)
 
-[Fragment 생명주기](https://www.notion.so/Fragment-19996382067649f192f8860e26cb5efc)
+Fragment 생명주기]
 
-[Search 생명주기](https://www.notion.so/Search-1d634e69c50043a38f5013c22f608d99)
+Search 생명주기
 
 ■ 참고 문헌
 
