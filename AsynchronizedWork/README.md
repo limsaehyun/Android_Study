@@ -8,7 +8,8 @@
 
 비공기 작업을 처리하는 라이브러리가 고려해야 할 4가지 측면들
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ecb9c572-33a1-4f81-b6cd-8966de3340b3/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/80076029/135937062-d1c29254-be07-4538-80a5-750600f40dee.png)
+
 
 **Explicit excution**
 
