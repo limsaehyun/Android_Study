@@ -6,11 +6,8 @@
 
 - 동기와 비동기에 대해서 알아봅니다.
 
-[동기 비동기](https://github.com/limsaehyun/Rx-and-Reactive-Programming/tree/main/SynchronousAndAsynchronous/SynchroExample)
+[동기 비동기](https://github.com/limsaehyun/Rx-and-Reactive-Programming/tree/main/SynchronousAndAsynchronous)
 
-- Blocking과 Non Blocking에 대해서 알아봅니다
-
-[blocking&non-blocking](https://www.notion.so/blocking-non-blocking-bb960236713e4dfe82e834680760d8fc)
 
 ### [STEP2] 비동기 작업에 대해서
 
