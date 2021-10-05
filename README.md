@@ -19,7 +19,7 @@
 
 비동기 데이터 스트림을 사용한 프로그래밍 Reactive System에 대해서 알아봅니다.
 
-[리엑티브 시스템](https://www.notion.so/48e80ea6ce884f81b93d615fb27cba41)
+[리엑티브 시스템](https://github.com/limsaehyun/Rx-ReactiveProgramming/blob/main/ReactiveSystem/README.md)
 
 ### [STEP4] Reactive Programming
 
