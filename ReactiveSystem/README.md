@@ -1,6 +1,7 @@
 ## Reactive Manifesto (리엑티브 시스템)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ffc34b25-f3b6-44bd-a5f0-9ea3c8da6a12/Untitled.png)
+![Untitled (1)](https://user-images.githubusercontent.com/80076029/136117454-7932ad89-791d-4d5b-82ed-b0c19e785f11.png)
+
 
 **Response(응답성)**
 
