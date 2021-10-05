@@ -13,7 +13,7 @@
 
 비동기 작업의 심화적인 계념을 알아봅니다.
 
-[비동기 작업](https://www.notion.so/63ca2fbbda5543b480653889efa7eeda)
+[비동기 작업](https://github.com/limsaehyun/Rx-and-Reactive-Programming/blob/main/AsynchronizedWork/README.md)
 
 ### [STEP3] Reactive System
 
