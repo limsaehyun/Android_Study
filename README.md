@@ -27,7 +27,7 @@ Reactive System을 구현하는데 적합한 프로그래밍 방법론인 Reacti
 
 - Observable, Observer에 대해서도 알아봅니다.
 
-[Reactive Programming](https://www.notion.so/Reactive-Programming-905251b58d644616aaa7f4f948e8a969)
+[Reactive Programming](https://github.com/limsaehyun/Rx-ReactiveProgramming/tree/main/ReactiveProgramming)
 
 ### [STEP5] ReactiveX
 
