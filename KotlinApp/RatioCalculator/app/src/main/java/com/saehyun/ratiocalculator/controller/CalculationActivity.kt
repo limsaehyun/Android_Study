@@ -30,9 +30,7 @@ class CalculationActivity : AppCompatActivity() {
 
         binding.tvCheckHorizontal.setOnClickListener {
             if(binding.etDP.text.isNotEmpty()) {
-                Log.d(TAG, "onCreate: " + HorizontalSize + " " +phoneSize.GalaxyS9Horizontal)
                 val RESULT = binding.etDP.text.toString().toDouble() / HorizontalSize.toDouble()
-                Log.d(TAG, "onCreate: " + RESULT)
                 binding.tvResult.setText("${round(RESULT*100)/100}")
             }
         }
