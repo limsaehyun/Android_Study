@@ -1,4 +1,4 @@
-package com.saehyun.ratiocalculator
+package com.saehyun.ratiocalculator.controller
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
