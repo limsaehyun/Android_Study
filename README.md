@@ -33,6 +33,14 @@ Reactive System을 구현하는데 적합한 프로그래밍 방법론인 Reacti
 
 Reactive Programming Principle의 구현체인 ReactiveX를 알아봅니다.
 
-- ReactiveX : 옵저버블 스트림으로 비동기 프로그래밍을 하기 위한 API
+[공식사이트](http://reactivex.io/)에선 ReactiveX에 대해 정의를 하고 있다.
 
-[ReactiveX](https://www.notion.so/ReactiveX-30d7a44ce79843f68a2af44ae18a093e)
+```xml
+"ReactiveX는 Observer패턴과 Iterator 패턴을 사용하여 비동기 이벤트를 정의하고,
+Functional 프로그래밍을 이벤트 처리하는 방식으로 사용하고 있다"
+```
+
+[RxJava](https://www.notion.so/RxJava-3d04956561c34dbe99fa21ce5b9914bb)
+
+- Java를 위한 ReactiveX Extensions
+- 리액티브 프로그래밍을 자바에서 구현한 프로그래밍 라이브러리이다.
