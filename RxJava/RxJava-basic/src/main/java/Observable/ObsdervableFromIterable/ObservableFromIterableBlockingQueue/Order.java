@@ -1,4 +1,4 @@
-package ObsdervableFromIterable.ObservableFromIterableBlockingQueue;
+package Observable.ObsdervableFromIterable.ObservableFromIterableBlockingQueue;
 
 public class Order {
     private String mId;

@@ -1,13 +1,16 @@
+package Observable;
+
 import io.reactivex.rxjava3.core.Observable;
 
-public class ObservableJustExample {
+public class ObservableFirstExample {
     public static void main(String[] args) {
-        ObservableJustExample demo = new ObservableJustExample();
+        ObservableFirstExample demo = new ObservableFirstExample();
         demo.emit();
     }
 
     private void emit() {
-        Observable.just(1, 2, 3, 4, 5, 6)
+        Observable.just("Hello", "RxJava2!!")
                 .subscribe(System.out::println);
     }
+
 }

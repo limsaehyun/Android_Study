@@ -1,15 +1,13 @@
-package ObsdervableFromIterable;
+package Observable.ObsdervableFromIterable;
 
 import io.reactivex.rxjava3.core.Observable;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-public class ObservableFromIterableSet {
+public class ObservableFromIterableList {
     public static void main(String[] args) {
-        Set<String> names = new HashSet<>();
+        List<String> names = new ArrayList<>();
         names.add("임세현");
         names.add("유현명");
         names.add("이준서");

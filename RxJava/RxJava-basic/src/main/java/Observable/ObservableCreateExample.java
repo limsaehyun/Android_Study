@@ -1,3 +1,5 @@
+package Observable;
+
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.ObservableEmitter;
 import io.reactivex.rxjava3.functions.Consumer;

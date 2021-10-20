@@ -1,4 +1,4 @@
-package ObsdervableFromIterable.ObservableFromIterableBlockingQueue;
+package Observable.ObsdervableFromIterable.ObservableFromIterableBlockingQueue;
 
 import io.reactivex.rxjava3.core.Observable;
 import java.util.concurrent.ArrayBlockingQueue;
