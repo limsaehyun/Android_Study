@@ -1,10 +1,6 @@
 package ObsdervableFromIterable.ObservableFromIterableBlockingQueue;
 
 import io.reactivex.rxjava3.core.Observable;
-import sun.security.provider.NativePRNG;
-
-import java.util.HashSet;
-import java.util.Set;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
