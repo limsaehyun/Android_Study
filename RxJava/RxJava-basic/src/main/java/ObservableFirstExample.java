@@ -1,8 +1,8 @@
 import io.reactivex.rxjava3.core.Observable;
 
-public class FirstExample {
+public class ObservableFirstExample {
     public static void main(String[] args) {
-        FirstExample demo = new FirstExample();
+        ObservableFirstExample demo = new ObservableFirstExample();
         demo.emit();
     }
 

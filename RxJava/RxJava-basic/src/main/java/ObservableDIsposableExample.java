@@ -1,7 +1,7 @@
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.disposables.Disposable;
 
-public class DIsposableExample {
+public class ObservableDIsposableExample {
     public static void main(String[] args) {
         Observable<String> source = Observable.just("RED", "GREEN", "YELLOW");
 
