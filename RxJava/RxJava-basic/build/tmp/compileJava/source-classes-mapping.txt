@@ -15,9 +15,9 @@ Observable/ObservableFromFuture.java
  Observable.ObservableFromFuture
 Observable/ObsdervableFromIterable/ObservableFromIterableBlockingQueue/ObservableFromIterableBlockingQueue.java
  Observable.ObsdervableFromIterable.ObservableFromIterableBlockingQueue.ObservableFromIterableBlockingQueue
-Single/SingleExample.java
- Single.SingleExample
-Observable/ObservableFirstExample.java
- Observable.ObservableFirstExample
 Observable/ObservableDIsposableExample.java
  Observable.ObservableDIsposableExample
+Observable/ObservableFirstExample.java
+ Observable.ObservableFirstExample
+Single/SingleExample.java
+ Single.SingleExample
