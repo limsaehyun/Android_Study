@@ -41,3 +41,5 @@ Operators/MapFuntionExample.java
  Operators.MapFuntionExample
 Operators/MapFuntionExample2.java
  Operators.MapFuntionExample2
+Operators/FlatMapExample.java
+ Operators.FlatMapExample
