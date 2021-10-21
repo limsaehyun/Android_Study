@@ -19,5 +19,11 @@ Observable/ObservableDIsposableExample.java
  Observable.ObservableDIsposableExample
 Observable/ObservableFirstExample.java
  Observable.ObservableFirstExample
+Subject/AsyncSubjectExample.java
+ Subject.AsyncSubjectExample
 Single/SingleExample.java
  Single.SingleExample
+Subject/AsyncSubjectOnCompleteExample.java
+ Subject.AsyncSubjectOnCompleteExample
+Subject/AsyncSubjectObservableExample.java
+ Subject.AsyncSubjectObservableExample
