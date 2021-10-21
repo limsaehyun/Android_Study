@@ -43,3 +43,9 @@ Operators/MapFuntionExample2.java
  Operators.MapFuntionExample2
 Operators/FlatMapExample.java
  Operators.FlatMapExample
+Operators/FliterExample.java
+ Operators.FliterExample
+Operators/FilterExample2.java
+ Operators.FilterExample2
+Operators/FileterSameExample.java
+ Operators.FileterSameExample
