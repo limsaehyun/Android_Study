@@ -33,3 +33,11 @@ Subject/BehaviorSubjectExample.java
  Subject.BehaviorSubjectExample
 Subject/ReplaySubjectExample.java
  Subject.ReplaySubjectExample
+ConnectableObservable/ConnectObservableExample.java
+ ConnectableObservable.ConnectObservableExample
+Operators/MapExample.java
+ Operators.MapExample
+Operators/MapFuntionExample.java
+ Operators.MapFuntionExample
+Operators/MapFuntionExample2.java
+ Operators.MapFuntionExample2
