@@ -27,3 +27,9 @@ Subject/AsyncSubjectOnCompleteExample.java
  Subject.AsyncSubjectOnCompleteExample
 Subject/AsyncSubjectObservableExample.java
  Subject.AsyncSubjectObservableExample
+Subject/PublishSubjectExample.java
+ Subject.PublishSubjectExample
+Subject/BehaviorSubjectExample.java
+ Subject.BehaviorSubjectExample
+Subject/ReplaySubjectExample.java
+ Subject.ReplaySubjectExample
