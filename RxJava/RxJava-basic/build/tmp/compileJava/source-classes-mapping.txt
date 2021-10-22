@@ -49,3 +49,7 @@ Operators/FilterExample2.java
  Operators.FilterExample2
 Operators/FileterSameExample.java
  Operators.FileterSameExample
+Operators/ReduceExample.java
+ Operators.ReduceExample
+Operators/ReduceExample2.java
+ Operators.ReduceExample2
