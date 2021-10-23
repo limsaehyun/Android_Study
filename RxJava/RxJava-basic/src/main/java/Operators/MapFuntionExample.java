@@ -3,7 +3,6 @@ package Operators;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.Observer;
 import io.reactivex.rxjava3.functions.Function;
-import sun.rmi.runtime.Log;
 
 
 public class MapFuntionExample {
