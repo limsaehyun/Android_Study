@@ -12,3 +12,9 @@ gugudan/GuGudan.java
  gugudan.GuGudan
 querytvsales/QueryTvSales2.java
  querytvsales.QueryTvSales2
+common/CommonUtils.java
+ common.CommonUtils
+common/Log.java
+ common.Log
+eletricbills/ElectricBills.java
+ eletricbills.ElectricBills
