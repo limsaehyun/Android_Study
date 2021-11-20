@@ -10,8 +10,8 @@ Operators/FilterExample2.java
  Operators.FilterExample2
 Subject/AsyncSubjectOnCompleteExample.java
  Subject.AsyncSubjectOnCompleteExample
-Operators/combine/ZipExample.java
- Operators.combine.ZipExample
+Operators/create/intervalRangeToInterval.java
+ Operators.create.intervalRangeToInterval
 Subject/BehaviorSubjectExample.java
  Subject.BehaviorSubjectExample
 ConnectableObservable/ConnectObservableExample.java
@@ -69,5 +69,9 @@ Observable/ObsdervableFromIterable/ObservableFromIterableBlockingQueue/Observabl
  Observable.ObsdervableFromIterable.ObservableFromIterableBlockingQueue.ObservableFromIterableBlockingQueue
 Single/SingleExample.java
  Single.SingleExample
-Operators/create/intervalRangeToInterval.java
- Operators.create.intervalRangeToInterval
+Operators/combine/ZipExample.java
+ Operators.combine.ZipExample
+Operators/combine/ZipWithExample.java
+ Operators.combine.ZipWithExample
+Math.java
+ Math
