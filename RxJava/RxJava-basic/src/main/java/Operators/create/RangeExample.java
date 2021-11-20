@@ -1,6 +1,6 @@
 package Operators.create;
 
-import Operators.common.Log;
+import common.Log;
 import io.reactivex.rxjava3.core.Observable;
 
 public class RangeExample {
