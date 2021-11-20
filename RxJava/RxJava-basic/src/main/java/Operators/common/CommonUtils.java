@@ -14,4 +14,8 @@ public class CommonUtils {
             e.printStackTrace();
         }
     }
+
+    public static void exampleComplete() {
+        System.out.println("-------------------");
+    }
 }
