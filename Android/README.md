@@ -34,3 +34,25 @@
 - Koin은 리플렉션을 이용해 런타임에 의존성을 주입을 하다보니 앱 성능이 저하된다 → 큰 규모의 프로젝트에서는 Dagger-Hilt가 적합하다.
 
 [Koin](https://www.notion.so/Koin-85c6730497ce4665af2581bec551d472)
+
+
+
+## Hilt
+
+------
+
+- Dagger를 기반으로 만들어진 DI Framewor이다.
+- 안정성 보장과 개발 환경과의 충돌이 될 수 있다.
+- 보수적이고 안정적인 프로젝트에서는 사용이 어렵지만, 개인 프로젝트 단계에서는 써볼만하다.
+
+[Hilt](https://www.notion.so/Hilt-f64ebd30972f4e039bb2e9652016371e)
+
+
+
+
+
+■ 참고 문헌
+
+------
+
+https://velog.io/@sysout-achieve/Android-DI-Framework-선택지Dagger2-Koin-Hilt
