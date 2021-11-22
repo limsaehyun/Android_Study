@@ -37,7 +37,7 @@
 
 ### 분야별 의존성 주입
 
-[Android](https://www.notion.so/Android-fbdbff2d46d64bff808fda72268725c8)
+[Android](https://github.com/limsaehyun/DI-Study/tree/main/Android)
 
 
 
