@@ -2,6 +2,7 @@ package com.saehyun.koinexample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import com.saehyun.koinexample.objet.Student
 import com.saehyun.koinexample.objet.Teacher
 import org.koin.android.ext.android.inject
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         val teacher : Teacher by inject() // 의존성 주입
         val student : Student by inject()
 
-        findViewById<Teacher>(R.id.text)
+        findViewById<TextView>(R.id.textViewTeacher).text = teacher.name
+        findViewById<TextView>(R.id.textViewStudent).text = student.name
     }
 }
