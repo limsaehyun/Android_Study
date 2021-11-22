@@ -21,3 +21,16 @@ implementation "io.insert-koin:koin-android:$koin_version"
 
 
 
+### 의존성 주입의 구성요소
+
+- Koin을 이용한 의존성 주입을 하기 위해서는 주입할 객체, 주입할 객체를 저장하는 Container, 주입한 객체를 모아놓은 모듈이 필요하다.
+
+  
+
+
+
+참고
+
+------
+
+https://kotlinworld.com
