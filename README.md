@@ -30,4 +30,19 @@
 **단점**
 
 - 코드를 추척하고 읽기다 어렵다.
+
 - 선행 작업이 필요하다.
+
+  
+
+### 분야별 의존성 주입
+
+[Android](https://www.notion.so/Android-fbdbff2d46d64bff808fda72268725c8)
+
+
+
+참고
+
+------
+
+https://velog.io/@jojo_devstory/DIDependency-Injection에-대해-알아보자
