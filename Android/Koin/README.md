@@ -25,6 +25,8 @@ implementation "io.insert-koin:koin-android:$koin_version"
 
 - Koin을 이용한 의존성 주입을 하기 위해서는 주입할 객체, 주입할 객체를 저장하는 Container, 주입한 객체를 모아놓은 모듈이 필요하다.
 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8e2e8db6-7d84-4d4d-b58f-347ccef250fb/Untitled.png)
   
 
 
