@@ -31,10 +31,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         val teacherCho: Teacher by inject()
-        val teacher : Teacher by inject() // 의존성 주입
-
-        val studentCho : Student by inject(named("cho"))
-        val studentKim : Student by inject(named("kim"))
 
         findViewById<TextView>(R.id.textViewTeacher).text = teacherCho.name
         findViewById<TextView>(R.id.textViewStudent).text = teacherCho.teachingStudent.name
