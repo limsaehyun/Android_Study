@@ -12,16 +12,14 @@
 
 * Kotlin Application
 
-* ToyProject
-
   
 
 ## Android JetPack
 
 **Architecture**
 
-- [데이터 바인딩(Data Binding)](https://github.com/limsaehyun/Jetpack_Study_Android/tree/main/DataBinding)
-- [Life Cycles](https://github.com/limsaehyun/Jetpack_Study_Android/blob/main/Life Cycles/README.md)
+- [DataBinding](https://github.com/limsaehyun/Android_Study_Repo/tree/master/JetPack/DataBinding)
+- [Life Cycles](https://github.com/limsaehyun/Android_Study_Repo/tree/master/JetPack/Life%20Cycles)
 - Navigation
 - Paging
 - Room
@@ -62,25 +60,29 @@
 
 ## 비동기 처리
 
-* RxJava
-* RxAndroid
-* Coroutine
+* [RxJava](https://github.com/limsaehyun/Android_Study_Repo/tree/master/ReactiveX)
+* [RxAndroid](https://github.com/limsaehyun/Android_Study_Repo/tree/master/ReactiveX)
+* [Coroutine](https://github.com/limsaehyun/Android_Study_Repo/tree/master/Coroutine)
 
 
 
 ## Architecture Pattern
 
-* MVC
-* MVP
-* MVVM
+* [MVC](https://github.com/limsaehyun/Android_Study_Repo/tree/master/ArchitecturePattern/MVC)
+* [MVP](https://github.com/limsaehyun/Android_Study_Repo/tree/master/ArchitecturePattern/MVP)
+* [MVVM](https://github.com/limsaehyun/Android_Study_Repo/tree/master/ArchitecturePattern/MVVM)
 
 
 
 ## DI
 
-* Koin
-* Dagger
-* Hilt
+* [Koin](https://github.com/limsaehyun/Android_Study_Repo/tree/master/DI/Koin)
+* [Dagger2](https://github.com/limsaehyun/Android_Study_Repo/tree/master/DI/Dagger2)
+* [Hilt](https://github.com/limsaehyun/Android_Study_Repo/tree/master/DI/Hilt)
+
+
+
+## Other
 
 
 
