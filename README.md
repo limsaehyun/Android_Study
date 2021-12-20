@@ -8,9 +8,9 @@
 
 ## Android App
 
-* Java Application
+* [Java Application](https://github.com/limsaehyun/Android_Study/tree/master/JavaApp)
 
-* Kotlin Application
+* [Kotlin Application](https://github.com/limsaehyun/Android_Study/tree/master/KotlinApp)
 
   
 
@@ -84,4 +84,4 @@
 
 ## Other
 
-* JavascriptInterface
+* [JavascriptInterface](https://velog.io/@limsaehyun/%EC%95%B1%EA%B3%BC-%EC%9B%B9%EB%B7%B0%EA%B0%84%EC%9D%98-%ED%86%B5%EC%8B%A0-%EC%98%88%EC%A0%9C-Android-JavascriptInterface-%EC%82%AC%EC%9A%A9%EB%B2%95)
