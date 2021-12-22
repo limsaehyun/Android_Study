@@ -12,6 +12,6 @@ class MainRepository {
 
     fun getPost() : @NonNull Single<Response<PostResponse>> =
         postApi.getPost()
-            .subscribeOn(AndroidSchedulers.mainThread())
-            .observeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeOn(Schedulers.io())
 }
