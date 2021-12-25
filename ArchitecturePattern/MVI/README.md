@@ -35,6 +35,17 @@ MVI가 의미하는 바는 아레와 같다.
 
 * 안드로이드는 무수한 **부수 효과**들로 이루어져 있다. 서버 호출, 데이터 베이스 접근 등, 우리는 어떤 결과를 얻을지 예상할 수 없으며, 그에 따라 상태 변경에 어려움을 겪는다.
 
+/Users/limsaehyun/Desktop/스크린샷 2021-12-25 오후 9.12.08.png
+
+MVI는 Intent가 User를 관찰하고, Model이 Intent를 관찰하고, View가 Model을 관찰하고, User가 View를 관찰하는 Reactive 요소로 이루어져 있다.
+
+### MVI의 작동 작식  
+
+1. Intent로 User로부터 입력을 가져온다.
+2. Intent는 Model에서 처리해야 하는 동작(Intended action)을 제공합니다.
+3. Model은 Intent로부터 동작을 가져옵니다
+(MVI의 모델은 데이터 뿐만아니라 Application State와 Business Logic을 관리합니다.)
+4. Model은 View에 표시할 새로운 모델을 생성합니다.
 
 
 
