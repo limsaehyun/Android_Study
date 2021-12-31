@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import java.io.PipedWriter
 
 @Entity
-data class Login(
+data class LoginEntity(
     val username: String,
     val password: String
 ) {
