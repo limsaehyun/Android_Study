@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -19,7 +20,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            MessageCard(Message("Android", "Jetpack Compose"))
+            MaterialTheme {
+                MessageCard(Message("Android", "Jetpack Compose"))
+            }
         }
     }
 }
@@ -39,9 +42,16 @@ fun MessageCard(msg: Message) {
         Spacer(modifier = Modifier.width(8.dp))
 
         Column {
-            Text(text = msg.author)
+            Text(
+                text = msg.author,
+                color = MaterialTheme.colors.secondaryVariant,
+                style = MaterialTheme.typography.subtitle2
+            )
             Spacer(modifier = Modifier.height(4.dp))
-            Text(text = msg.body)
+            Text(
+                text = msg.body,
+                style = MaterialTheme.typography.body2
+            )
         }
     }
 }
@@ -49,5 +59,7 @@ fun MessageCard(msg: Message) {
 @Preview
 @Composable
 fun PreviewMessageCard() {
-    MessageCard(Message("Colleague", "LookAt Me"))
+    MaterialTheme {
+        MessageCard(Message("Colleague", "LookAt Me"))
+    }
 }
