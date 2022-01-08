@@ -24,4 +24,13 @@ class ExampleUnitTest {
         assertEquals(52, calculator.addValue(50, 1))
     }
 
+    @Test
+    fun addArray_test() {
+        var arr : Array<Int> = arrayOf(1, 2, 3, 4)
+        var ret : Array<Int> = arrayOf(4, 5, 6, 7)
+
+        assertArrayEquals(ret, calculator.addArray(arr, 3))
+        assertArrayEquals(ret, calculator.addArray(arr, 30))
+    }
+
 }

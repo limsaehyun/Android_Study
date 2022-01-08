@@ -8,7 +8,7 @@ class Calculator {
     }
 
     fun addArray(arr: Array<Int>, a: Int) : Array<Int> {
-        for(i:Int in 0..arr.size) {
+        for(i:Int in 0..arr.size-1) {
             arr[i] += a
         }
         return arr
