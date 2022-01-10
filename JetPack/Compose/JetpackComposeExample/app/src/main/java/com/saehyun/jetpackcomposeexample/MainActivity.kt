@@ -6,6 +6,8 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -23,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         setContent {
             MaterialTheme {
-                MessageCard(Message("Android", "Jetpack Compose"))
+                Conversation(messages = MessageData.conversationSample)
             }
         }
     }
@@ -32,7 +34,24 @@ class MainActivity : AppCompatActivity() {
 data class Message(val author: String, val body: String)
 
 @Composable
-fun MessageCard(msg: Message) {ㄷ
+fun Conversation(messages: List<Message>) {
+    LazyColumn {
+        items(messages) { message ->
+            MessageCard(message)
+        }
+    }
+}
+
+@Preview
+@Composable
+fun PreviewConversation() {
+    MaterialTheme {
+        Conversation(MessageData.conversationSample)
+    }
+}
+
+@Composable
+fun MessageCard(msg: Message) {
     Row(modifier = Modifier.padding(all = 8.dp)) {
         Image(
             painter = painterResource(id = R.drawable.icon),
