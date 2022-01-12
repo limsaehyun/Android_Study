@@ -24,7 +24,7 @@ class PracticeActivity : AppCompatActivity() {
         setContent {
             ArtistCard(artist = "skeat")
         }
-        
+
     }
     
     @Composable
