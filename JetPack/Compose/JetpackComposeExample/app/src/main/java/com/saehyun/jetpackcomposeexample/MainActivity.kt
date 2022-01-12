@@ -101,16 +101,3 @@ fun MessageCard(msg: Message) {
         }
     }
 }
-
-@Preview(name = "Light Mode")
-@Preview(
-    uiMode = Configuration.UI_MODE_NIGHT_YES,
-    showBackground = true,
-    name = "Dark Mode"
-)
-@Composable
-fun PreviewMessageCard() {
-    MaterialTheme {
-        MessageCard(Message("Colleague", "LookAt Me"))
-    }
-}
