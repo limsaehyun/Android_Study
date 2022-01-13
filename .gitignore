@@ -2,3 +2,5 @@
 .DS_Store
 
 KotlinApp/KakaoAuthExample/app/src/main/res/values/kakao_app_key.xml
+
+KotlinApp/KakaoAuthExample/app/src/main/java/com/saehyun/kakaoauthexample/KakaoAppKey.kt
