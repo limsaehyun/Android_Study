@@ -29,23 +29,18 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    viewBinding {
+        enabled true
+    }
 }
 
 dependencies {
-    // 카카오 로그인
-    implementation group: 'com.kakao.sdk', name: 'usermgmt', version: '1.30.6'
-
-    // 카카오톡
-    implementation group: 'com.kakao.sdk', name: 'kakaotalk', version: '1.30.6'
-
-    // 카카오스토리
-    implementation group: 'com.kakao.sdk', name: 'kakaostory', version: '1.30.6'
-
-    // 카카오링크
-    implementation group: 'com.kakao.sdk', name: 'kakaolink', version: '1.30.6'
-
-    // 카카오내비
-    implementation group: 'com.kakao.sdk', name: 'kakaonavi', version: '1.30.6'
+    implementation "com.kakao.sdk:v2-user:2.8.4" // 카카오 로그인
+    implementation "com.kakao.sdk:v2-talk:2.8.4" // 친구, 메시지(카카오톡)
+    implementation "com.kakao.sdk:v2-story:2.8.4" // 카카오스토리
+    implementation "com.kakao.sdk:v2-link:2.8.4" // 메시지(카카오링크)
+    implementation "com.kakao.sdk:v2-navi:2.8.4" // 카카오내비
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
