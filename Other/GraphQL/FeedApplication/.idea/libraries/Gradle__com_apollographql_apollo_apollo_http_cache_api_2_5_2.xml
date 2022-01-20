@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.apollographql.apollo:apollo-http-cache-api:2.5.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.apollographql.apollo/apollo-http-cache-api/2.5.2/64b5b32ca8b3a0cb22c4af77667772705534db83/apollo-http-cache-api-2.5.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.apollographql.apollo/apollo-http-cache-api/2.5.2/e86fc2ea6dd960ecb1107af188c86ff4ef7fe637/apollo-http-cache-api-2.5.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.apollographql.apollo/apollo-http-cache-api/2.5.2/3db390c1a7ab22c0af105cb2209a4685419ef183/apollo-http-cache-api-2.5.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
