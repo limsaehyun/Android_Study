@@ -1,0 +1,11 @@
+mutation Create($name: String!, $price: Int!) {
+    createProduct(data: {
+        name: $name
+        price: $price
+    }) {
+        id
+        name
+        price
+    }
+}
+
