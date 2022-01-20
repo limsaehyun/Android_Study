@@ -1,0 +1,7 @@
+query PostProduct($postId: Float!) {
+    getProduct(id: $postId){
+        id
+        name
+        price
+    }
+}
