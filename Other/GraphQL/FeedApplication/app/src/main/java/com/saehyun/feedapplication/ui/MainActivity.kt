@@ -1,4 +1,4 @@
-package com.saehyun.feedapplication
+package com.saehyun.feedapplication.ui
 
 import GetProductsQuery
 import android.animation.ObjectAnimator
@@ -8,9 +8,11 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.apollographql.apollo.ApolloCall
-import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.exception.ApolloException
+import com.saehyun.feedapplication.network.ApiProvider
+import com.saehyun.feedapplication.MainAdapter
+import com.saehyun.feedapplication.R
 import com.saehyun.feedapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

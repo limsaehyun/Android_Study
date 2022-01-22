@@ -1,14 +1,13 @@
-package com.saehyun.feedapplication
+package com.saehyun.feedapplication.ui
 
 import CreateMutation
-import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import com.apollographql.apollo.ApolloCall
 import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.exception.ApolloException
+import com.saehyun.feedapplication.network.ApiProvider
 import com.saehyun.feedapplication.databinding.ActivityCreateBinding
 
 class CreateActivity : AppCompatActivity() {

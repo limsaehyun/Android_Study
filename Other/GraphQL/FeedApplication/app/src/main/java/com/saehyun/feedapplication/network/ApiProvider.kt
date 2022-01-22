@@ -1,4 +1,4 @@
-package com.saehyun.feedapplication
+package com.saehyun.feedapplication.network
 
 import com.apollographql.apollo.ApolloClient
 

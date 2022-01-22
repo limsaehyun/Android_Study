@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.saehyun.feedapplication.ui.ProductActivity
 
 class MainAdapter(
     val context: Context,
