@@ -41,6 +41,9 @@ dependencies {
     implementation 'androidx.databinding:databinding-runtime:4.2.2'
     kapt "com.google.dagger:hilt-android-compiler:2.38.1"
 
+    implementation "com.squareup.moshi:moshi-kotlin:1.12.0"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:1.12.0"
+
     implementation 'com.google.code.gson:gson:2.8.8'
 
     implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
