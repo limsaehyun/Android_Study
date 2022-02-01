@@ -1,4 +1,4 @@
-package com.moizaandroid.moizaarchitecturesample.base
+package com.moizaandroid.moizaarchitecturesample.ui.base
 
 import android.os.Bundle
 import android.widget.Toast
