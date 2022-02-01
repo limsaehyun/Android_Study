@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.moizaandroid.moizaarchitecturesample.R
 import com.moizaandroid.moizaarchitecturesample.data.remote.network.error.ResultWrapper
 import com.moizaandroid.moizaarchitecturesample.data.repository.PostRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -23,13 +24,13 @@ class MainViewModel @Inject constructor(
             val fetchPost = mainRepository.fetchPost(postId)
             when(fetchPost) {
                 is ResultWrapper.NetworkError -> {
-                    Log.d("Main", "fetchPost: n")
+                    errorToast.value = R.string.error_network.toString()
                 }
-                is ResultWrapper.GenericError -> {
-                    Log.d("Main", "fetchPost: e")
+                is ResultWrapper.Failed -> {
+                    errorToast.value = fetchPost.error?.errorMessage
                 }
                 is ResultWrapper.Success -> {
-                    Log.d("Main", "fetchPost: s")
+                    postData.value = fetchPost.value.toString()
                 }
             }
         }

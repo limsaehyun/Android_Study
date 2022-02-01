@@ -25,9 +25,14 @@ class MainActivity : BaseActivity<ActivityMainBinding> (
 
     override fun observeEvent() {
         observe(vm.postData, ::setData)
+        observe(vm.errorToast, ::error)
     }
 
     fun setData(postData: String) {
         binding.tvResult.text = postData
+    }
+
+    fun error(message: String) {
+        showToast("message")
     }
 }
