@@ -1,4 +1,4 @@
-package com.moizaandroid.moizaarchitecturesample.data.remote.network
+package com.moizaandroid.moizaarchitecturesample.data.remote.network.error
 
 import com.squareup.moshi.JsonClass
 

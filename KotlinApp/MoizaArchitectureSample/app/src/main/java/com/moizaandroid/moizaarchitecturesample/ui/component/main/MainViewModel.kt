@@ -4,14 +4,10 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.moizaandroid.moizaarchitecturesample.data.remote.network.ResultWrapper
+import com.moizaandroid.moizaarchitecturesample.data.remote.network.error.ResultWrapper
 import com.moizaandroid.moizaarchitecturesample.data.repository.PostRepository
-import com.moizaandroid.moizaarchitecturesample.utils.ApiException
-import com.moizaandroid.moizaarchitecturesample.utils.NoInternetException
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import java.lang.RuntimeException
 import javax.inject.Inject
 
 @HiltViewModel

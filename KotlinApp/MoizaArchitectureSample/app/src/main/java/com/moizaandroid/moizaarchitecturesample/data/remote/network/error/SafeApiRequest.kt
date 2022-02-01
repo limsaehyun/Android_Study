@@ -1,8 +1,6 @@
-package com.moizaandroid.moizaarchitecturesample.data.remote.network
+package com.moizaandroid.moizaarchitecturesample.data.remote.network.error
 
 import com.squareup.moshi.Moshi
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 import retrofit2.Response
 import java.io.IOException
