@@ -15,9 +15,9 @@ suspend fun <T> safeApiCall(apiCall: suspend () -> Response<T>): ResultWrapper<T
             is HttpException -> {
                 val code = throwable.code()
                 val errorResponse = convertErrorBody(throwable)
-                ResultWrapper.GenericError(code, errorResponse)
+                ResultWrapper.Failed(code, errorResponse)
             }
-            else -> ResultWrapper.GenericError(null, null)
+            else -> ResultWrapper.Failed(null, null)
         }
     }
 }
