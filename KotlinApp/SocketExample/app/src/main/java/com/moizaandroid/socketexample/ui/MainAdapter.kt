@@ -31,19 +31,23 @@ class MainAdapter(val context: Context, val data: ArrayList<Message>):
 
     inner class Holder(itemView : View):  RecyclerView.ViewHolder(itemView) {
         val tvChat = itemView.findViewById<TextView>(R.id.tvChat)
+        val tvName = itemView.findViewById<TextView>(R.id.tvName)
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         val data = data.get(position)
         val message = data.message
+        val name = data.name
         val viewType = data.viewType
 
         when(viewType) {
             CHAT_MINE -> {
                 holder.tvChat?.text = message
+                holder.tvName?.text = name
             }
             CHAT_PARTNER -> {
                 holder.tvChat?.text = message
+                holder.tvName?.text = name
             }
         }
     }
