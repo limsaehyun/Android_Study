@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -16,8 +18,6 @@ import com.hackaton.composetest.ui.theme.ComposeTestTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        startActivity(Intent(this, TestActivity::class.java))
 
         setContent {
             ComposeTestTheme {
@@ -60,9 +60,9 @@ fun OnboardingScreen(onContinueClick: () -> Unit) {
 }
 
 @Composable
-fun Messages(names: List<String> = listOf("Test", "Test2")) {
-    Column {
-        for (name in names) {
+fun Messages(names: List<String> = List(1000) { "$it" }) {
+    LazyColumn(modifier = Modifier.padding(bottom = 4.dp)) {
+        items(items = names) { name ->
             Message(name = name)
         }
     }
