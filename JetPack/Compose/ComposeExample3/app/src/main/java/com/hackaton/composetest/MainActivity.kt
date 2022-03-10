@@ -15,6 +15,7 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
 import com.hackaton.composetest.ui.theme.ComposeTestTheme
@@ -99,7 +100,9 @@ fun Message(name: String) {
                     .padding(bottom = expendedPadding.coerceAtLeast(0.dp))
             ) {
                 Text(text = "Hello,")
-                Text(text = name)
+                Text(text = name, style = MaterialTheme.typography.h4.copy(
+                    fontWeight = FontWeight.ExtraBold
+                ))
             }
 
             OutlinedButton(onClick = {
@@ -115,6 +118,6 @@ fun Message(name: String) {
 @Composable
 fun MessagePreview() {
     ComposeTestTheme {
-        MyApp()
+        Message("Android")
     }
 }
