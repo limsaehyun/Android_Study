@@ -11,10 +11,14 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
@@ -77,6 +81,17 @@ fun Messages(names: List<String> = List(1000) { "$it" }) {
 @Composable
 fun Message(name: String) {
 
+    Card(
+        backgroundColor = MaterialTheme.colors.primary,
+        modifier = Modifier.padding(8.dp, 4.dp)
+    ) {
+        CardContent(name)
+    }
+}
+
+@Composable()
+fun CardContent(name: String) {
+
     var buttomState by rememberSaveable { mutableStateOf(false) }
 
     val expendedPadding by animateDpAsState (
@@ -87,29 +102,34 @@ fun Message(name: String) {
         )
     )
 
-    Surface(
-        color = MaterialTheme.colors.primary,
-        modifier = Modifier.padding(8.dp, 4.dp)
+    Row(
+        modifier = Modifier.padding(24.dp)
     ) {
-        Row(
-            modifier = Modifier.padding(24.dp)
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .padding(bottom = expendedPadding.coerceAtLeast(0.dp))
         ) {
-            Column(
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(bottom = expendedPadding.coerceAtLeast(0.dp))
-            ) {
-                Text(text = "Hello,")
-                Text(text = name, style = MaterialTheme.typography.h4.copy(
-                    fontWeight = FontWeight.ExtraBold
-                ))
+            Text(text = "Hello,")
+            Text(text = name, style = MaterialTheme.typography.h4.copy(
+                fontWeight = FontWeight.ExtraBold
+            ))
+            if(buttomState) {
+                Text(
+                    text = ("이건 텍스트입니다.").repeat(10)
+                )
             }
+        }
 
-            OutlinedButton(onClick = {
-                buttomState = !buttomState
-            }) {
-                Text(if (buttomState) "Show Less" else "Show More")
-            }
+        IconButton(onClick = { buttomState = !buttomState }) {
+            Icon(
+                imageVector = if (buttomState) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
+                contentDescription = if (buttomState) {
+                    stringResource(R.string.show_less)
+                } else {
+                    stringResource(R.string.show_more)
+                }
+            )
         }
     }
 }
