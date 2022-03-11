@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeTest">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/Theme.ComposeTest.NoActionBar" />
+        <activity
             android:name=".TestActivity"
             android:exported="false"
             android:label="@string/title_activity_test"
