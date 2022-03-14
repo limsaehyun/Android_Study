@@ -9,9 +9,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -26,7 +27,7 @@ class ProfileActivity : ComponentActivity() {
         setContent {
             ComposeTestTheme {
                 Surface(color = MaterialTheme.colors.background) {
-                    PhotographerCard()
+                    ButtonView()
                 }
             }
         }
@@ -49,7 +50,6 @@ fun PhotographerCard() {
             shape = CircleShape,
             color = MaterialTheme.colors.surface.copy(alpha = 0.2f)
         ) {
-
         }
 
         Column(
@@ -66,12 +66,40 @@ fun PhotographerCard() {
     }
 }
 
+@Composable
+fun ButtonView() {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(text = "Compose Test")
+                },
+                actions = {
+                    IconButton(onClick = {}) {
+                        Icon(Icons.Filled.Favorite, contentDescription = null)
+                    }
+                }
+            )
+        }
+    ) { innerPadding ->
+        BodyContent(modifier = Modifier.padding(innerPadding))
+    }
+}
+
+@Composable
+fun BodyContent(modifier: Modifier = Modifier) {
+    Column(modifier = modifier) {
+        Text(text = "Hi there!")
+        Text(text = "Thanks for going through the Layouts codelab")
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     ComposeTestTheme {
         Surface(color = MaterialTheme.colors.background) {
-            PhotographerCard()
+            ButtonView()
         }
     }
 }
