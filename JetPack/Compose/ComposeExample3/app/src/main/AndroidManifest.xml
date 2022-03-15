@@ -2,16 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hackaton.composetest">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ComposeTest">
+        android:theme="@style/Theme.ComposeTest"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".LayoutActivity"
+            android:exported="false"
+            android:label="@string/title_activity_layout"
+            android:theme="@style/Theme.ComposeTest.NoActionBar" />
         <activity
             android:name=".ListActivity"
             android:exported="true"
@@ -27,7 +32,7 @@
             android:name=".ProfileActivity"
             android:exported="false"
             android:label="@string/title_activity_profile"
-            android:theme="@style/Theme.ComposeTest.NoActionBar"/>
+            android:theme="@style/Theme.ComposeTest.NoActionBar" />
         <activity
             android:name=".TestActivity"
             android:exported="false"
