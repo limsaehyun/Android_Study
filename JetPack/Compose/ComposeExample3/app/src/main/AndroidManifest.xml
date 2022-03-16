@@ -14,20 +14,20 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".LayoutActivity"
-            android:exported="false"
-            android:label="@string/title_activity_layout"
-            android:theme="@style/Theme.ComposeTest.NoActionBar" />
-        <activity
-            android:name=".ListActivity"
             android:exported="true"
-            android:label="@string/title_activity_list2"
-            android:theme="@style/Theme.ComposeTest.NoActionBar">
+            android:label="@string/title_activity_layout"
+            android:theme="@style/Theme.ComposeTest.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ListActivity"
+            android:exported="false"
+            android:label="@string/title_activity_list2"
+            android:theme="@style/Theme.ComposeTest.NoActionBar"/>
         <activity
             android:name=".ProfileActivity"
             android:exported="false"
