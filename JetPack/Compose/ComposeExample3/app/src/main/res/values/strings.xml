@@ -6,4 +6,8 @@
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="title_activity_list2">ListActivity2</string>
     <string name="title_activity_layout">LayoutActivity</string>
+    <string name="title_activity_box">BoxActivity</string>
+    <string name="title_activity_scaffold">ScaffoldActivity</string>
+    <string name="title_activity_constraint_layout">ConstraintLayoutActivity</string>
+    <string name="title_activity_custom_layout">CustomLayoutActivity</string>
 </resources>
