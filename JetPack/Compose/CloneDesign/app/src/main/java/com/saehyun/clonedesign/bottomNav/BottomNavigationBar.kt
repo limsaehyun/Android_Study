@@ -1,15 +1,19 @@
 package com.saehyun.clonedesign.bottomNav
 
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.saehyun.clonedesign.theme.HalfMint
 import com.saehyun.clonedesign.theme.Mint
-
+import java.nio.file.Files.size
 
 @Composable
 fun BottomNavigationBar(navController: NavController) {
@@ -27,7 +31,12 @@ fun BottomNavigationBar(navController: NavController) {
         val currentRoute = navBackStackEntry?.destination?.route
         items.forEach { item ->
             BottomNavigationItem(
-                icon = { Icon(painterResource(id = item.icon), contentDescription = item.title) },
+                icon = {
+                    Icon(
+                        painter = painterResource(id = item.icon),
+                        contentDescription = item.title,
+                        modifier = Modifier.size(20.dp).padding(bottom = 6.dp)
+                    )},
                 label = { Text(text = item.title) },
                 selectedContentColor = Color.Companion.White,
                 unselectedContentColor = HalfMint,
