@@ -1,4 +1,4 @@
-package com.saehyun.clonedesign.ui
+package com.saehyun.clonedesign.ui.main
 
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable

@@ -4,9 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.saehyun.clonedesign.ApplicationScreen
-import com.saehyun.clonedesign.FeedScreen
-import com.saehyun.clonedesign.MyPageScreen
+import com.saehyun.clonedesign.ui.application.ApplicationScreen
+import com.saehyun.clonedesign.ui.feed.FeedScreen
+import com.saehyun.clonedesign.ui.mypage.MyPageScreen
 import com.saehyun.clonedesign.ui.notification.NotificationScreen
 
 @Composable
