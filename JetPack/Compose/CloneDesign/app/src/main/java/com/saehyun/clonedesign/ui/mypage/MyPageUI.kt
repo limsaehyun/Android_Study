@@ -15,7 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.saehyun.clonedesign.R
-import com.saehyun.clonedesign.bottomNave.MintBox
+import com.saehyun.clonedesign.component.MintBox
 import com.saehyun.clonedesign.component.ImageIconButton
 import com.saehyun.clonedesign.component.MyPageTextBar
 import com.saehyun.clonedesign.component.WhiteBox

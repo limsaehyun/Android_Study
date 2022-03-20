@@ -1,4 +1,4 @@
-package com.hackaton.composetest
+package com.hackaton.composetest.ui.activity
 
 import android.icu.text.CaseMap
 import android.os.Bundle

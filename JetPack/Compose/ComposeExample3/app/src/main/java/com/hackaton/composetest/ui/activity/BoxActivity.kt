@@ -1,4 +1,4 @@
-package com.hackaton.composetest
+package com.hackaton.composetest.ui.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
