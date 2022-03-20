@@ -10,4 +10,9 @@
     <string name="title_activity_scaffold">ScaffoldActivity</string>
     <string name="title_activity_constraint_layout">ConstraintLayoutActivity</string>
     <string name="title_activity_custom_layout">CustomLayoutActivity</string>
+    <string name="cd_crop_square">Crop</string>
+    <string name="cd_done">Done</string>
+    <string name="cd_event">Event</string>
+    <string name="cd_privacy">Privacy</string>
+    <string name="cd_restore">Restore</string>
 </resources>

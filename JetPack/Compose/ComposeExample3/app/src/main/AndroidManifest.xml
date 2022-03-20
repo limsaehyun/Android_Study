@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ComposeTest"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.activity.StateActivity"
+            android:exported="false" />
+        <activity
             android:name=".CustomLayoutActivity"
             android:exported="false"
             android:label="@string/title_activity_custom_layout"
