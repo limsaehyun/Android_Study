@@ -13,15 +13,17 @@
         android:theme="@style/Theme.ComposeTest"
         android:usesCleartextTraffic="true">
         <activity
+            android:label="@string/title_activity_custom_layout"
+            android:theme="@style/Theme.ComposeTest.NoActionBar"
             android:name=".ui.activity.StateActivity"
             android:exported="false" />
         <activity
-            android:name=".CustomLayoutActivity"
+            android:name=".ui.activity.CustomLayoutActivity"
             android:exported="false"
             android:label="@string/title_activity_custom_layout"
             android:theme="@style/Theme.ComposeTest.NoActionBar" />
         <activity
-            android:name=".ConstraintLayoutActivity"
+            android:name=".ui.activity.ConstraintLayoutActivity"
             android:exported="true"
             android:label="@string/title_activity_constraint_layout"
             android:theme="@style/Theme.ComposeTest.NoActionBar">
@@ -32,37 +34,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ScaffoldActivity"
+            android:name=".ui.activity.ScaffoldActivity"
             android:exported="false"
             android:label="@string/title_activity_scaffold"
             android:theme="@style/Theme.ComposeTest.NoActionBar" />
         <activity
-            android:name=".BoxActivity"
+            android:name=".ui.activity.BoxActivity"
             android:exported="false"
             android:label="@string/title_activity_box"
             android:theme="@style/Theme.ComposeTest.NoActionBar" />
         <activity
-            android:name=".LayoutActivity"
+            android:name=".ui.activity.LayoutActivity"
             android:exported="false"
             android:label="@string/title_activity_layout"
             android:theme="@style/Theme.ComposeTest.NoActionBar" />
         <activity
-            android:name=".ListActivity"
+            android:name=".ui.activity.ListActivity"
             android:exported="false"
             android:label="@string/title_activity_list2"
             android:theme="@style/Theme.ComposeTest.NoActionBar" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".ui.activity.ProfileActivity"
             android:exported="false"
             android:label="@string/title_activity_profile"
             android:theme="@style/Theme.ComposeTest.NoActionBar" />
         <activity
-            android:name=".TestActivity"
+            android:name=".ui.activity.TestActivity"
             android:exported="false"
             android:label="@string/title_activity_test"
             android:theme="@style/Theme.ComposeTest.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeTest.NoActionBar" />

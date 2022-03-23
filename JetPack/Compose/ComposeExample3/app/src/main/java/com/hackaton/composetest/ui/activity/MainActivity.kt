@@ -21,6 +21,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
+import com.hackaton.composetest.R
 import com.hackaton.composetest.ui.theme.ComposeTestTheme
 
 class MainActivity : ComponentActivity() {
