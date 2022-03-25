@@ -14,7 +14,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.saehyun.clonedesign.R
+import com.saehyun.clonedesign.bottomNav.MyPage
 import com.saehyun.clonedesign.component.MintBox
 import com.saehyun.clonedesign.component.ImageIconButton
 import com.saehyun.clonedesign.component.MyPageTextBar
@@ -22,7 +24,9 @@ import com.saehyun.clonedesign.component.WhiteBox
 import com.saehyun.clonedesign.theme.Mint
 
 @Composable
-fun MyPageScreen() {
+fun MyPageScreen(
+    navController: NavController
+) {
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -34,13 +38,17 @@ fun MyPageScreen() {
 
         Spacer(modifier = Modifier.size(20.dp))
 
-        MyPageBottomMenu()
+        MyPageBottomMenu(
+            onWarningList = { navController.navigate(MyPage.WarningList.route) }
+        )
 
     }
 }
 
 @Composable
-fun MyPageBottomMenu() {
+fun MyPageBottomMenu(
+    onWarningList: () -> Unit
+) {
     val context = LocalContext.current
 
     Column {
@@ -57,7 +65,7 @@ fun MyPageBottomMenu() {
         )
 
         MyPageTextBar(
-            onClick = { Toast.makeText(context, "click", Toast.LENGTH_SHORT).show() },
+            onClick = onWarningList,
             title = "상 / 벌점 내역",
             lore = "우정관 상/ 벌점 내역을 확인합니다"
         )
@@ -144,10 +152,4 @@ fun MyPageTopScreen() {
             WhiteBox(title = "30", lore = "벌점")
         }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun PreviewMyPageScreen() {
-    MyPageScreen()
 }

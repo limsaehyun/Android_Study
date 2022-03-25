@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import com.saehyun.clonedesign.ui.application.ApplicationScreen
 import com.saehyun.clonedesign.ui.feed.FeedScreen
 import com.saehyun.clonedesign.ui.mypage.MyPageScreen
+import com.saehyun.clonedesign.ui.mypage.WarningListUI
 import com.saehyun.clonedesign.ui.notification.NotificationScreen
 
 @Composable
@@ -22,7 +23,10 @@ fun NavigationGraph(navController: NavHostController) {
             NotificationScreen()
         }
         composable(BottomNavItem.MyPage.screen_route) {
-            MyPageScreen()
+            MyPageScreen(navController)
+        }
+        composable(MyPage.WarningList.route) {
+            WarningListUI()
         }
     }
 }
