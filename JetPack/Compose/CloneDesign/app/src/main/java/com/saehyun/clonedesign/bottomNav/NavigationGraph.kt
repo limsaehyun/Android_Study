@@ -26,7 +26,7 @@ fun NavigationGraph(navController: NavHostController) {
             MyPageScreen(navController)
         }
         composable(MyPage.WarningList.route) {
-            WarningListUI()
+            WarningListUI(navController)
         }
     }
 }

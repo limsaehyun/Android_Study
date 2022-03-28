@@ -2,6 +2,7 @@ package com.saehyun.clonedesign.ui.mypage
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -12,12 +13,18 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.NavHost
+import androidx.navigation.NavHostController
 import com.saehyun.clonedesign.R
+import com.saehyun.clonedesign.bottomNav.BottomNavItem
 import com.saehyun.clonedesign.theme.Mint
 import java.nio.file.WatchEvent
 
 @Composable
-fun WarningListUI() {
+fun WarningListUI(
+    navController: NavController
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -31,17 +38,13 @@ fun WarningListUI() {
         ) {
             Image(
                 painter = painterResource(id = R.drawable.ic_back),
-                contentDescription = "Text",
-                modifier = Modifier.padding(16.dp)
+                contentDescription = "back button",
+                modifier = Modifier
+                    .padding(16.dp)
+                    .clickable { navController.popBackStack() }
             )
             Spacer(modifier = Modifier.size(16.dp))
             Text(text = "상벌점 내역 조회", color = Color.White)
         }
     }
-}
-
-@Preview
-@Composable
-fun PreviewWarningListUI() {
-    WarningListUI()
 }
