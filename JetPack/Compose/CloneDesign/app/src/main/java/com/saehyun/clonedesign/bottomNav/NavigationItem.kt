@@ -1,4 +1,7 @@
 package com.saehyun.clonedesign.bottomNav
 
-sealed class NavigationItem(var route: String) {
+sealed class NavigationItem(val route: String) {
+    object WarningList: NavigationItem("warningList")
+
+    object Main: NavigationItem("main")
 }
