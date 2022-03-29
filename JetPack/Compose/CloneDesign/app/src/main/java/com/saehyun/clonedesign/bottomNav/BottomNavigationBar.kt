@@ -16,7 +16,7 @@ import com.saehyun.clonedesign.theme.Mint
 import java.nio.file.Files.size
 
 @Composable
-fun BottomNavigationBar(navController: NavController) {
+fun BottomNavigationBar(navBarController: NavController) {
     val items = listOf(
         BottomNavItem.Feed,
         BottomNavItem.Application,
@@ -27,7 +27,7 @@ fun BottomNavigationBar(navController: NavController) {
         backgroundColor = Mint,
         contentColor = HalfMint
     ) {
-        val navBackStackEntry by navController.currentBackStackEntryAsState()
+        val navBackStackEntry by navBarController.currentBackStackEntryAsState()
         val currentRoute = navBackStackEntry?.destination?.route
         items.forEach { item ->
             BottomNavigationItem(
@@ -43,8 +43,8 @@ fun BottomNavigationBar(navController: NavController) {
                 alwaysShowLabel = true,
                 selected = currentRoute == item.screen_route,
                 onClick = {
-                    navController.navigate(item.screen_route) {
-                        navController.graph.startDestinationRoute?.let { route ->
+                    navBarController.navigate(item.screen_route) {
+                        navBarController.graph.startDestinationRoute?.let { route ->
                             popUpTo(route) {
                                 saveState = true
                             }

@@ -11,21 +11,17 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import com.saehyun.clonedesign.R
-import com.saehyun.clonedesign.bottomNav.MyPage
-import com.saehyun.clonedesign.component.MintBox
-import com.saehyun.clonedesign.component.ImageIconButton
-import com.saehyun.clonedesign.component.MyPageTextBar
-import com.saehyun.clonedesign.component.WhiteBox
+import com.saehyun.clonedesign.bottomNav.NavigationItem
+import com.saehyun.clonedesign.component.*
 import com.saehyun.clonedesign.theme.Mint
 
 @Composable
 fun MyPageScreen(
-    navController: NavController
+    navController: NavHostController
 ) {
     Column(
         modifier = Modifier.fillMaxSize()
@@ -33,13 +29,19 @@ fun MyPageScreen(
         MyPageTopScreen()
 
         Spacer(modifier = Modifier.size(20.dp))
-        
+
         MintBox(text = "퇴사가 오늘 내일한다.")
 
         Spacer(modifier = Modifier.size(20.dp))
 
         MyPageBottomMenu(
-            onWarningList = { navController.navigate(MyPage.WarningList.route) }
+            onWarningList = {
+                navController.navigate(NavigationItem.WarningList.route) {
+                    popUpTo(navController.graph.startDestinationId)
+                    launchSingleTop = true
+                    restoreState = true
+                }
+            }
         )
 
     }
