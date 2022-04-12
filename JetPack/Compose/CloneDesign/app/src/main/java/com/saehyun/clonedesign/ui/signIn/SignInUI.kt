@@ -74,6 +74,7 @@ fun TopBox() {
             )
             Spacer(modifier = Modifier.size(16.dp))
             Text(text = "DMS for Android", color = Color.White, style = Typography.body1)
+            Text(text = "Dormitory Management System", color = Color.White, style = Typography.body2)
         }
     }
 }
