@@ -6,7 +6,7 @@
 ## Android Archive
 Title | Description
 :----|:----
-Jetpack (Architecture) | 1. DataBinding： [데이터바인딩 정리](abc)<br>2. LifeCycles： [생명주기 정리](abc)<br>3. Navigation： 네비게이션 정리<br>4. Paging： 패깅 정리<br>5. Room： 룸 정리<br>6. ViewModel： 뷰모델 정리<br>7. WorkManager： 워크 매니저 정리
+Jetpack (Architecture) | 1. DataBinding： [데이터바인딩 정리](https://github.com/limsaehyun/Android_Study/tree/master/JetPack/DataBinding)<br>2. LifeCycles： [생명주기 정리](https://github.com/limsaehyun/Android_Study/tree/master/JetPack/Life%20Cycles)<br>3. Navigation： 네비게이션 정리<br>4. Paging： 패깅 정리<br>5. Room： 룸 정리<br>6. ViewModel： 뷰모델 정리<br>7. WorkManager： 워크 매니저 정리
 Jetpack (Foundation) | 1. Appcompat： App Compat 정리 <br>2. Android KTX ： Android KTX 정리<br>3. Multidex： Multidex 정리 <br>4. Test： 안드로이드 테스트 정리<br>
 Jetpack (UI/UX) | 1. Animation： 안드로이드 에니메이션 쓰는 방법<br>2. Transitions： Transitions 정리<br>2. Emoji :  이모지 정리<br>3. Fragment :  프레그먼트 정리<br>4. Layout :  레이아웃 정리<br> 5. Palette :  팔레트 정리<br> 6. Compose :  [Jetpack에 대해서](https://github.com/limsaehyun/Android_Study/tree/master/JetPack/Compose)
 Jetpack (Behavior) | 1. Download Manager :  Download Manager 정리<br>2. Media & Playback :  Media & Playback 정리<br>3. Permissions :  Permissions 정리<br>4. Notifications :  Notifications 정리<br>5. Sharing :  Sharing 정리<br>6. Slices :  Slices 정리
