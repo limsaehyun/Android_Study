@@ -4,7 +4,7 @@
 
 - 앱에서 발생하는 특정 이벤트 (앱이 시작할 때, 앱에 들어갈 때 등)에 대해 정의를 한 것이다.
 
-[Activity 생명주기](https://github.com/limsaehyun/Jetpack_Study_Android/blob/main/Life%20Cycles/Activity%20Life%20Cycles/README.md)
+[Activity 생명주기](https://github.com/limsaehyun/Android_Study/tree/master/JetPack/Life%20Cycles)
 
 Fragment 생명주기
 
