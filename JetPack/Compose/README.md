@@ -1,8 +1,10 @@
-## What is?
+### COMPOSE
 
-Jetpack Compose는 네이티스 UI를 빌드하기 위한 Android의 최신 도구 키드입니다.
+Jetpack Compose는 ***현대적인 선언형 UI 도구 키트***입니다. Compose는 뷰를 명령형으로 작성
 
 기존의 뷰를 업데이트하는 방식과 달리 Compose를 사용하면 필요한 영역의 뷰룰 다시 그려주는 방식으로 작업할 수 있습니다.
+
+
 
 ## Why?
 
