@@ -1,5 +1,6 @@
 package com.saehyun.clonedesign.component
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.size
@@ -14,6 +15,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.saehyun.clonedesign.theme.Mint
+import com.saehyun.clonedesign.theme.coloredShadow
 
 @Composable
 fun WhiteBox(
@@ -22,9 +25,12 @@ fun WhiteBox(
 ) {
     Card(
         modifier = Modifier
-            .size(153.dp, 67.dp),
-        shape = RoundedCornerShape(15.dp),
-        backgroundColor = Color.White
+            .background(
+                shape = RoundedCornerShape(15.dp),
+                color = Color.White
+            )
+            .size(153.dp, 67.dp)
+            .coloredShadow(color = Mint, offsetY = 2.dp)
     ) {
         Column(
             verticalArrangement = Arrangement.Center,
